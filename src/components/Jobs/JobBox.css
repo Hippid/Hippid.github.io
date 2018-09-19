@@ -1,0 +1,89 @@
+.parentGrid {
+    display: grid;
+}
+
+.job_row {
+    /* Subgrid not supported yet. */
+    /* display:subgrid */
+    display: grid;
+
+    grid-template-areas: "job_eu_wage job_wage job_title job_company job_posted job_search job_location job_hide";
+    /* 8 Columns */
+    grid-template-columns: 1fr 2fr 6fr 3fr 3fr 3fr 4fr 1fr;
+    /* 5 px gap between each span */
+    grid-gap: 5px;
+    /* Rows  60 px height or more */
+    grid-auto-rows: minmax(50px, auto);
+
+    /* 5px padding around whole row */
+    padding: 10px;
+    text-align: left;
+
+    --hover-color: var(--text-font-color);
+}
+
+.job_row:hover {
+    background-color: #eeeeea;
+    color: var(--hover-font-color);
+    --hover-color: var(--hover-font-color);
+}
+
+/* .job_row i {
+  color: var(--hover-color);
+} */
+
+.job_eu_wage {
+    grid-area: job_eu_wage;
+    display: inline-block;
+}
+
+.job_wage {
+    grid-area: job_wage;
+    display: inline-block;
+}
+
+.job_title {
+    grid-area: job_title;
+    display: inline-block;
+}
+
+.job_company {
+    grid-area: job_company;
+    display: inline-block;
+}
+
+.job_posted {
+    grid-area: job_posted;
+    display: inline-block;
+}
+
+.job_search {
+    grid-area: job_search;
+    display: inline-block;
+}
+
+.job_location {
+    grid-area: job_location;
+    display: inline-block;
+}
+
+.job_hide {
+    grid-area: job_hide;
+    text-align: center;
+    display: inline-block;
+}
+
+.job_filter {
+    margin: 0px;
+    padding: 15px;
+    background-color: #eeeeea;
+    color: var(--hover-font-color);
+}
+
+.job_filter input[type="checkbox"] {
+    margin-left: 10px;
+}
+
+.space_filter {
+    margin-right: 30px;
+}
