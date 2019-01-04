@@ -1,0 +1,87 @@
+html, body {
+    color: #fff;
+    text-align: center;
+    width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: purple;
+}
+
+bodyT {
+  display: grid;
+  grid-template-rows: 150px auto 100px;
+  grid-template-columns: minmax(200px, 3fr) 9fr;
+  grid-template-areas: "header header"
+                      "nav    main"
+                      "nav    footer";
+}
+
+bodyF {
+  display: grid;
+  grid-template-rows: fit-content(40%); /* 150px auto 100px; */
+  grid-template-columns: repeat(12, 1fr);
+  /* grid-auto-rows: minmax(100px, auto); */
+  grid-template-areas: "header header header header header header header header header header header header"
+                       "main main main main main main main main main main main main"
+                       "footer footer footer footer footer footer footer footer footer footer footer footer";
+   background: purple;
+}
+
+.body {
+    display: grid;
+    grid: "header header header header   header   header   header   header   header" minmax(100px, auto)
+    "nav nav nav main main main main main main" minmax(100px, auto)
+    "footer footer footer footer   footer   footer   footer   footer   footer" minmax(100px, auto)
+    / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+}
+
+header {
+  grid-area: header;
+  background: red;
+}
+
+nav {
+  grid-area: nav;
+  background: yellow;
+}
+
+main {
+   grid-area: main;
+   background: green;
+}
+
+footer {
+    grid-area:footer;
+    background: blue;
+}
+
+/*
+#content {
+    display: grid;
+
+    /* 6 Columns 1 Fraction */ /*
+    grid-template-columns: repeat(6 , 1fr);
+
+    /* Rows 150 px height or more */ /*
+    grid-auto-rows: minmax(150px, auto);
+
+    /* Spacing in between */ /*
+    grid-gap: 10px;
+
+    /* Limit grid max width */ /*
+    max-width: 960px;
+
+     /* Remove margin */ /*
+    margin: 0 auto;
+}
+
+#content > div {
+    background: #333;
+    padding: 30px;
+}
+
+#content {
+    transform: rotateZ(45deg) scale(0.6);
+}
+*/
